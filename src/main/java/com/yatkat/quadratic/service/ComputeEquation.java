@@ -7,6 +7,9 @@ import lombok.extern.log4j.Log4j2;
 public class ComputeEquation {
 
     public static QuadraticEquationModel compute(int a, int b, int c) {
+        if (a == 0) {
+            throw new ArithmeticException("Don't put 0 as a first argument to quadratic equation");
+        }
         QuadraticEquationModel equationModel = new QuadraticEquationModel(a, b, c);
         double discriminant = (double) (b * b - 4 * a * c);
         if (discriminant > 0) {
