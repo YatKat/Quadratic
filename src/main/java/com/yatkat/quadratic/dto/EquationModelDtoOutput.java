@@ -11,7 +11,7 @@ public class EquationModelDtoOutput {
     private int a;
     private int b;
     private int c;
-    private Double result1;
-    private Double result2;
+    private Double root1;
+    private Double root2;
 }
 
