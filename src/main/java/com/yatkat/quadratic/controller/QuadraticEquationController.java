@@ -2,7 +2,7 @@ package com.yatkat.quadratic.controller;
 
 import com.yatkat.quadratic.dto.EquationModelDtoInput;
 import com.yatkat.quadratic.dto.EquationModelDtoOutput;
-import com.yatkat.quadratic.dto.UtilDto;
+import com.yatkat.quadratic.util.UtilDto;
 import com.yatkat.quadratic.model.QuadraticEquationModel;
 import com.yatkat.quadratic.service.ComputeEquation;
 import com.yatkat.quadratic.service.IQuadraticEquationService;
@@ -33,7 +33,7 @@ public class QuadraticEquationController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String getResult(@ModelAttribute("input") EquationModelDtoInput input, ModelMap map) {
-        EquationModelDtoOutput output = new EquationModelDtoOutput();
+        EquationModelDtoOutput output;
         if (input.getA() == 0) {
             return "wrongInput";
         }
@@ -41,9 +41,9 @@ public class QuadraticEquationController {
         model = ComputeEquation.compute(model.getA(), model.getB(), model.getC());
         service.saveToDB(model);
         log.info("Info saved to DB");
-        if (model.getResult1() == null && model.getResult2() == null) {
+        if (model.getRoot1() == null && model.getRoot2() == null) {
             return "noRoots";
-        } else if (model.getResult2() == null) {
+        } else if (model.getRoot2() == null) {
             output = UtilDto.convertToOutput(model);
             map.put("output", output);
             return "oneRoot";

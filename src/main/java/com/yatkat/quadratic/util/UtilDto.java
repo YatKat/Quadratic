@@ -1,5 +1,7 @@
-package com.yatkat.quadratic.dto;
+package com.yatkat.quadratic.util;
 
+import com.yatkat.quadratic.dto.EquationModelDtoInput;
+import com.yatkat.quadratic.dto.EquationModelDtoOutput;
 import com.yatkat.quadratic.model.QuadraticEquationModel;
 
 public class UtilDto {
@@ -14,6 +16,6 @@ public class UtilDto {
 
     public static EquationModelDtoOutput convertToOutput(QuadraticEquationModel model) {
         return new EquationModelDtoOutput(model.getA(), model.getB(), model.getC(),
-                model.getResult1(), model.getResult2());
+                model.getRoot1(), model.getRoot2());
     }
 }

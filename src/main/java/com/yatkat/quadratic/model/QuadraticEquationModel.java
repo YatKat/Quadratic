@@ -22,8 +22,8 @@ public class QuadraticEquationModel {
     private int a;
     private int b;
     private int c;
-    private Double result1;
-    private Double result2;
+    private Double root1;
+    private Double root2;
 
     public QuadraticEquationModel(int a, int b, int c) {
         this.a = a;

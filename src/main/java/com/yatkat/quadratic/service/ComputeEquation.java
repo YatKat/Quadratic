@@ -17,12 +17,12 @@ public class ComputeEquation {
             double x1, x2;
             x1 = (-b - Math.sqrt(discriminant)) / (2 * a);
             x2 = (-b + Math.sqrt(discriminant)) / (2 * a);
-            equationModel.setResult1(x1);
-            equationModel.setResult2(x2);
+            equationModel.setRoot1(x1);
+            equationModel.setRoot2(x2);
         } else if (discriminant == 0) {
             double x;
             x = -b / (2 * a);
-            equationModel.setResult1(x);
+            equationModel.setRoot1(x);
         }
         return equationModel;
     }
