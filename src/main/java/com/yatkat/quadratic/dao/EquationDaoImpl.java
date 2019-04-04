@@ -17,6 +17,6 @@ public class EquationDaoImpl implements EquationDao {
 
     @Override
     public void saveToDB(QuadraticEquationModel model) {
-         this.sessionFactory.getCurrentSession().save(model);
+        this.sessionFactory.getCurrentSession().save(model);
     }
 }

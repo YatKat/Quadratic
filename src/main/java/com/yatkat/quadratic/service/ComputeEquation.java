@@ -8,6 +8,7 @@ public class ComputeEquation {
 
     public static QuadraticEquationModel compute(int a, int b, int c) {
         if (a == 0) {
+            log.error("Arithmetic exception: division for 0");
             throw new ArithmeticException("Don't put 0 as a first argument to quadratic equation");
         }
         QuadraticEquationModel equationModel = new QuadraticEquationModel(a, b, c);

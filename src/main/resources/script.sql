@@ -9,5 +9,3 @@ create table results
   result1 double null,
   result2 double null
 );
-
-

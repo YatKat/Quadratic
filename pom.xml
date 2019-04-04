@@ -28,12 +28,10 @@
             </plugin>
         </plugins>
     </build>
-
     <properties>
         <spring.version>3.2.18.RELEASE</spring.version>
         <log4j.version>2.11.1</log4j.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -71,7 +69,6 @@
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -82,7 +79,6 @@
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -157,5 +153,4 @@
             <version>7.0.55</version>
         </dependency>
     </dependencies>
-
 </project>
