@@ -14,7 +14,7 @@ Be careful, you should not put 0 as "a" value;
 
 # <a name="structure"></a>Project Structure
 * Java 8
-* SpringBoot 3.2.18 RELEASE
+* Spring Framework 3.2.18 RELEASE
 * Maven 4.0.0
 * Tomcat 9.0.4
 * Log4j 2.11.1
